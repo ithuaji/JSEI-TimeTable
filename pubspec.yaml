@@ -1,0 +1,39 @@
+name: flutter_application_1
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_inappwebview: any
+  cupertino_icons: any
+  permission_handler: any
+  http: any
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/photo/icon/icon.png"
+
+flutter:
+  assets:
+    - assets/web/index/index.html
+    - assets/web/index/js/main.js
+    - assets/web/index/js/socketio.js
+    - assets/web/index/js/update.js
+    - assets/web/index/css/style.css
