@@ -1,0 +1,490 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	overflow: auto;
+	
+}
+
+.container {
+	width: 300px;
+	padding: 0;
+	border-radius: 8px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	overflow: auto;
+	
+}
+
+.header {
+	display: none;
+
+	background-color: #c3ffb9;
+	color: black;
+
+
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 1%;
+}
+
+.header button {
+	background-color: #d9534f;
+	color: white;
+	border: none;
+	cursor: pointer;
+
+}
+
+h2 {
+	text-align: center;
+	color: #333;
+	margin: 0;
+}
+
+label {
+	display: block;
+	margin: 10px 0 5px;
+	color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	width: 100%;
+	padding: 10px;
+	margin-top: 15px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #aa00ff;
+}
+
+.response-container {
+	flex: 1;
+	width: 100%;
+	
+	padding-top: 0;
+	background-color: #f9f9f9;
+	border-top: 1px solid #ddd;
+	overflow-y: auto;
+	display: none;
+}
+
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	color: #000000;
+}
+
+#relogin {
+	width: auto;
+	margin-top: 0;
+	height: auto;
+}
+
+/* 登录中提示 */
+#loadingContainer {
+    display: flex;
+    flex-direction: column; /* 改为纵向排列 */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    color: #4CAF50;
+    text-align: center;
+}
+
+#LoadingTextview {
+    text-align: center;
+    width: 100%;
+    display: block; /* 子元素占整行 */
+}
+
+#sendDataBtn {
+    width: 30%;
+    margin: 10px auto; /* 居中按钮 */
+    padding: 2%;
+    display: block; /* 子元素占整行 */
+}
+
+
+
+#StateOfServer{
+	text-align: center;
+}
+
+
+.day-header {
+	text-align: center;
+	font-size: 1.2em;
+	/* 可根据需要调整字体大小 */
+	margin-top: 0px;
+	/* 可根据需要调整上下间距 */
+	color: #333;
+	/* 可根据需要调整颜色 */
+}
+
+p {
+	margin: 0;
+	/* 去掉默认边距 */
+}
+
+h3 {
+	margin: 0;
+	/* 去掉默认边距 */
+	margin-top: 0;
+}
+
+#schedule-container {
+	margin: 0;
+	/* 去掉默认边距 */
+}
+h6{
+	margin: 0;
+}
+#today-daytitle{
+	text-align: center;
+	align-items: center;
+	margin: 1%;
+	
+}
+
+
+.body_box{
+	margin: 2%;
+}
+
+
+
+
+
+.dropdown-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* 标签样式 */
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+/* 美化下拉框 */
+.custom-select {
+    width: 33%;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* 焦点状态下样式 */
+.custom-select:focus {
+    border-color: #66afe9;
+    background-color: #eaf4fe;
+}
+
+/* 隐藏 IE 下拉框的小箭头 */
+.custom-select::-ms-expand {
+    display: none;
+}
+
+/* 添加自定义箭头图标 */
+.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"%3E%3Cpath d="M3 6l5 5 5-5z"%3E%3C/path%3E%3C/svg%3E');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+/* 点击时的框影 */
+.custom-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+option {
+    padding: 10px;
+}
+
+#TrunToAimWeek{
+	width: 33%;
+}
+#TrunToNextWeek{
+	width: 33%;
+	background-color: pink;
+}
+#ReturnToCurrentWeek{
+
+	background-color: red;
+}
+#Todaybox {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    
+	align-items: center;
+	margin: auto;
+	padding: 2%;
+	margin-top: 3%;
+	
+	
+}
+
+
+
+
+
+
+#userinfo{
+	width: 90%;
+	height: auto;
+	border-radius: 10px;
+	
+	align-items: center;
+	margin: auto;
+	padding: 2%;
+	padding-bottom: 0;
+	
+}
+#datainfo{
+	width: 90%;
+	height: auto;
+	border-radius: 10px;
+	
+	align-items: center;
+	margin: auto;
+	padding: 2%;
+	padding-top: 0;
+}
+#Weekbox {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    
+	align-items: center;
+
+	margin-top: 2%;
+
+	padding: 2%;
+	margin-top: 3%;
+	position: relative;
+}
+#week-title{
+	align-items: center;
+	text-align: center;
+}
+#TimeLine{
+	width: 100px;
+	height: 0;
+	border: 1px dashed rgba(255,0,0,1);
+	z-index: 10;
+	top:100px;
+	
+	position: absolute;
+
+}
+#OtherWeekbox{
+	width: 90%;
+	height: auto;
+	border-radius: 10px;
+	
+	align-items: center;
+	margin: auto;
+	padding: 2%;
+	margin-top: 3%;
+}
+#loginContainer{
+	padding: 3%;
+	margin: auto;
+}
+.dashed-border{
+	width: auto;
+	height: 0;
+	border: 1px dashed rgba(0,0,0,0.1);
+}
+.no-courses{
+	text-align: center;
+	color: red;
+	
+}
+.current-class {
+    color: green;
+    font-weight: bold;
+}
+
+/* 下一节课程：红色 */
+.next-class {
+    color: red;
+    font-weight: bold;
+}
+
+h2 {
+    color: green;
+}
+h3 {
+    color: red;
+}
+
+
+
+
+.ToadyCouseDetial{
+	text-align: center;
+	margin: 1%;
+	margin-top: 2%;
+
+
+}
+
+.ToadyCouseDetial_Ncourse{
+
+	width: 16%;
+	font-size: 2.5vh;
+
+	display: inline-block;
+}
+.ToadyCouseDetial_Location{
+	width: 41%;
+	font-size: 3vh;
+	display: inline-block;
+	text-align: center;
+}
+.ToadyCouseDetial_timeRange{
+	width: 403;
+	display: inline-block;
+	font-size: 3vh;
+}
+.ToadyCouseDetial_Name{
+	width: 100%;
+	display: inline-block;
+	font-size: 3vh
+}
+
+#Classing{
+	display: inline-block;
+}
+#Nextclass{
+	display: inline-block;
+}
+.runner-container{
+	display: inline-block;
+}
+#NextClassAlarmTitleBox{
+	width: auto;
+	display: inline-block;
+	background-color: rgba(255,0,0,0.3);
+	padding: 1%;
+	border-radius: 8px;
+	border:1px solid rgba(0,0,0,0.1);
+	
+}
+#NextClassingTitleBox{
+	width: auto;
+	display: inline-block;
+	background-color: rgba(0,255,0,0.3);
+	padding: 1%;
+	border-radius: 8px;
+	border:1px solid rgba(0,0,0,0.1);
+	
+}
+th{
+	padding: 0;
+	
+}
+td{
+	width: 11%;
+	border-radius:8px;
+	border-collapse: separate;
+	word-wrap: break-word;
+	word-break: break-all;
+	
+}
+table{
+
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius:33px;
+	border: solid 2px #dfdfdf;
+}
+#week-title{
+	margin: 8px;
+}
+
+.ClassTableTimetie{
+	white-space:nowrap;
+}
+
+#PowerLineBox{
+	display: flex; 
+	align-items: center;
+	 width: 70px;
+	 z-index: 11;
+	 position: absolute;
+	 top:95px;
+	 left: 33px;
+}
+#PowerLineCircle{
+	width: 13px; 
+	height: 13px; 
+	border-radius: 50%; 
+	background-color: #ff5733;
+}
+#PowerLine_line{
+	flex-grow: 1; 
+	height: 3px; 
+	background-color: #ff5733;
+}
+#CyBox {
+	top: 200px;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	perspective: 1000px;
+	font-size: 20px;
+}
+
+.PowerLineSText {
+	position: absolute;
+	left: 50%;
+	transform-origin: -150px center center;
+	transform-style: preserve-3d;
+
+	color: #000000;
+	text-align: center;
+	opacity: 0;
+}
