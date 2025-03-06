@@ -1,4 +1,4 @@
-# 🕒 JSEI-TimeTable
+# 🕒 JSEI-TimeTable（上tmd课）
 
 [![GitHub License](https://img.shields.io/github/license/ithuaji/JSEI-TimeTable)](https://github.com/ithuaji/JSEI-TimeTable/blob/main/LICENSE)
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.13.9-blue)](https://flutter.dev)
